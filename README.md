@@ -2,7 +2,32 @@
 
 Nginx Reverse Proxy Template in Docker
 
+```
+version: '3.3'
+services:
+  nginx:
+    container_name: nginx
+    image: nginx:latest
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./hosts:/etc/nginx/conf.d
+      - ./certs:/etc/ssl/private
+    networks:
+      - nginx-public
+
+networks:
+  nginx-public:
+    external: true
+```
+
 # Usage
+
+```
+docker network create nginx-public
+```
 
 ./hosts/app1.conf
 ```
