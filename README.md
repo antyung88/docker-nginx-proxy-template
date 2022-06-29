@@ -74,7 +74,7 @@ DNS.2 = *.example.com
 openssl genrsa -out hostname.key 2048
 openssl rsa -in hostname.key -out hostname-key.pem
 openssl req -new -key hostname-key.pem -out hostname-request.csr
-openssl x509 -req -extensions v3_req -days 14600 -in hostname-request.csr -signkey hostname-key.pem -out hostname-cert.pem -extfile openssl.cnf
+openssl x509 -req -extensions v3_req -days 14600 -in hostname-request.csr -signkey key.pem -out cert.pem -extfile openssl.cnf
 ```
 
 
