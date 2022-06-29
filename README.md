@@ -1,6 +1,6 @@
 # docker-nginx-proxy-template
 
-Nginx Reverse Proxy Template in Docker
+Nginx Reverse Proxy Template in Docker With Self Signed Certificates
 
 ```
 version: '3.3'
