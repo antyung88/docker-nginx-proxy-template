@@ -1,4 +1,4 @@
-# dev-docker-nginx-proxy-template
+# docker-nginx-proxy-template
 
 Nginx Reverse Proxy Template in Docker
 
